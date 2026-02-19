@@ -2,7 +2,10 @@ package eus.ferpinan.ausolanmenu;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
@@ -38,17 +41,24 @@ public class Scheduler {
     }
 
     private void sendMenu() {
-        String currentDate = LocalDate.now().format(DateTimeFormatter.ISO_DATE);
+        String todayDate = LocalDate.now().format(DateTimeFormatter.ISO_DATE);
+        String tomorrowDate = LocalDate.now().plusDays(1).format(DateTimeFormatter.ISO_DATE);
 
-        log.info("Getting menu...");
-        Optional<String> menu = menuCache.getMenu(currentDate);
+        String message = Stream.of(
+                        Map.entry(todayDate, "Gaurko menua"),
+                        Map.entry(tomorrowDate, "Biharko menua")
+                )
+                .map(e -> menuCache.getMenu(e.getKey())
+                        .map(menu -> String.format("%s (%s):%n%n%s", e.getValue(), e.getKey(), menu)))
+                .filter(Optional::isPresent)
+                .map(Optional::get)
+                .collect(Collectors.joining("\n\n"));
 
-        if (menu.isPresent()){
-            log.info("Sending telegram message...");
-            log.info(menu.get());
-            telegramService.sendMessage(menu.get());
-        }else{
-            log.info("No menu found");
+        if (message.isEmpty()) {
+            log.info("No menus found for dates {} and {}", todayDate, tomorrowDate);
+        } else {
+            log.info("Sending telegram message...\n{}", message);
+            telegramService.sendMessage(message);
         }
     }
 }

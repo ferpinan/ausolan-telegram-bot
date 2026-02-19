@@ -9,7 +9,6 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -21,13 +20,12 @@ import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 @Log4j2
-public class MenuService {
+public class AusolanService {
 
     private final RestTemplate restTemplate;
     private final AusolanProperties ausolanProperties;
@@ -87,7 +85,7 @@ public class MenuService {
                 }
 
                 String fechaFormateada = fecha.format(formatter);
-                resultado.put(fechaFormateada, String.format("Gaurko menua (%s):\n\n", fechaFormateada) + sb.toString().trim());
+                resultado.put(fechaFormateada, sb.toString().trim());
             }
         }
 
