@@ -1,28 +1,26 @@
 package eus.ferpinan.ausolanmenu.cache;
 
-import eus.ferpinan.ausolanmenu.service.AusolanService;
-import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Service;
-
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
+import eus.ferpinan.ausolanmenu.service.AusolanService;
+import lombok.RequiredArgsConstructor;
+
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class MenuCache {
 
     private final AusolanService ausolanService;
 
-    private static Map<String, String> menuCache = new HashMap<>();
+    private Map<String, String> menus = Map.of();
 
     public void resetMenus(){
-        menuCache = ausolanService.getMonthlyMenu();
+        menus = ausolanService.getMonthlyMenu();
     }
 
     public Optional<String> getMenu(String day){
-        return Optional.ofNullable(menuCache.get(day));
+        return Optional.ofNullable(menus.get(day));
     }
-
-
 }

@@ -1,11 +1,16 @@
 spring:
   application:
     name: ausolan-telegram-bot
+  main:
+    web-application-type: none
 ausolan:
+  baseUrl: https://apimenuo.ausolan.com/plapi
   centroPk: 4c892ec4983a49dfb156b2830157a241
   centroEnvioPk: 385f5df365de42bfb890b291008e12c8
   dietaPk: d12fe25a9bbd49239e3cd65eef62e7c5
   idiomaPk: 00242C08E94B10101810432101292479
+  menuPk: cebf5d72a8ba4ac2b20bb2ac008f5403
+  servicioPk: 6f6096586ff248189d7d535b8509f411
 telegram:
   bot-token: 7637911987:AAHLPYMyFSFbAyin_z6FmGg-IOJYUoNTRDI
   chat-token: "@amassorrainmenudev"
