@@ -2,14 +2,13 @@ package eus.ferpinan.ausolanmenu.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-import lombok.Data;
-
-@Data
 @ConfigurationProperties(prefix = "ausolan")
-public class AusolanProperties {
-
-    private String centroPk;
-    private String centroEnvioPk;
-    private String dietaPk;
-    private String idiomaPk;
-}
+public record AusolanProperties(
+        String baseUrl,
+        String centroPk,
+        String centroEnvioPk,
+        String dietaPk,
+        String idiomaPk,
+        String menuPk,
+        String servicioPk
+) {}
