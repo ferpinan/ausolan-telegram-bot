@@ -3,5 +3,5 @@ version: '3.8'
 services:
   ausolan-telegram-bot:
     build:
-      context: .  # Build the Dockerfile from the current directory
+      context: .  # Build the Dockerfile.pi4 from the current directory
     restart: unless-stopped
