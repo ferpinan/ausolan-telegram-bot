@@ -43,3 +43,11 @@ jobs:
           tags: |
             ferpinan/ausolan-telegram-bot:latest
             ferpinan/ausolan-telegram-bot:${{ steps.pom_version.outputs.version }}
+      - name: Update Docker Hub description
+        uses: peter-evans/dockerhub-description@v4
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: ferpinan/ausolan-telegram-bot
+          short-description: "Ausolan Telegram Bot - Version ${{ steps.pom_version.outputs.version }}"
+          readme-filepath: ./docker/README.md
