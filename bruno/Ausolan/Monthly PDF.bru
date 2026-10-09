@@ -1,0 +1,77 @@
+meta {
+  name: Monthly PDF
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://apimenuo.ausolan.com/plapi/Report/GeneratePdfFigma
+  body: json
+  auth: inherit
+}
+
+headers {
+  User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:147.0) Gecko/20100101 Firefox/147.0
+  Accept: application/json
+  Accept-Language: es-ES,es;q=0.9,en-US;q=0.8,en;q=0.7
+  Accept-Encoding: gzip, deflate, br, zstd
+  Content-type: application/json
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjRjODkyZWM0OTgzYTQ5ZGZiMTU2YjI4MzAxNTdhMjQxIiwibmJmIjoxNzcxNTA0NTMxLCJleHAiOjE3NzE1MDU0MzEsImlhdCI6MTc3MTUwNDUzMX0.N63sudLcRKCVLMBdpvfAgXG0zcVqfbzquqHRa2khUZc
+  Origin: https://menuo.ausolan.com
+  Connection: keep-alive
+  Referer: https://menuo.ausolan.com/
+  Sec-Fetch-Dest: empty
+  Sec-Fetch-Mode: cors
+  Sec-Fetch-Site: same-site
+  Priority: u=0
+  TE: trailers
+}
+
+body:json {
+  [
+    {
+      "nombre": "FechaIni",
+      "valorObjeto": "2026-02-01T23:00:00.000Z"
+    },
+    {
+      "nombre": "FechaFin",
+      "valorObjeto": "2026-02-27T23:00:00.000Z"
+    },
+    {
+      "nombre": "PkMenu",
+      "valorObjeto": "cebf5d72a8ba4ac2b20bb2ac008f5403"
+    },
+    {
+      "nombre": "PkCentro",
+      "valorObjeto": "4c892ec4983a49dfb156b2830157a241"
+    },
+    {
+      "nombre": "PkCentroEnvio",
+      "valorObjeto": "385f5df365de42bfb890b291008e12c8"
+    },
+    {
+      "nombre": "PkDieta",
+      "valorObjeto": "d12fe25a9bbd49239e3cd65eef62e7c5"
+    },
+    {
+      "nombre": "PkServicio",
+      "valorObjeto": "[\"6f6096586ff248189d7d535b8509f411\"]"
+    },
+    {
+      "nombre": "PkIdioma",
+      "valorObjeto": "00242C08E94B10101810432101292479"
+    },
+    {
+      "nombre": "NombreArchivo",
+      "valorObjeto": "0#20260219133701888_0000000084_HAURREN TXANDA_[BASAL]_[eu]_[Otsaila]_HILABETEA"
+    },
+    {
+      "nombre": "TipoVista",
+      "valorObjeto": "Mensual"
+    }
+  ]
+}
+
+settings {
+  encodeUrl: false
+}

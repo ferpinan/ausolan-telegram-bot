@@ -1,17 +1,9 @@
 spring:
   application:
     name: ausolan-telegram-bot
-  main:
-    web-application-type: none
-ausolan:
-  baseUrl: https://apimenuo.ausolan.com/plapi
-  centroPk: 4c892ec4983a49dfb156b2830157a241
-  centroEnvioPk: 385f5df365de42bfb890b291008e12c8
-  dietaPk: d12fe25a9bbd49239e3cd65eef62e7c5
-  idiomaPk: 00242C08E94B10101810432101292479
-  menuPk: cebf5d72a8ba4ac2b20bb2ac008f5403
-  servicioPk: 6f6096586ff248189d7d535b8509f411
+gasca:
+  base-url: https://bekosuapi.grupogasca.com/api/main
+  app-secret-token: ${GASCA_APP_SECRET_TOKEN:889B640DE4E6DFB93DD9D690B5F840A9A6D89BABB4D755771053F52808F25B4A56792FDA647B6FE391745E3A461E71867A43D3A7FEE625FB2EFC9DB76C406BF9}
 telegram:
-  bot-token: 7637911987:AAHLPYMyFSFbAyin_z6FmGg-IOJYUoNTRDI
+  bot-token: 8883084036:AAHLNCXAgfInALRZ4ztMxqeUNewQxHOBKmc
   chat-token: "@amassorrainmenudev"
-

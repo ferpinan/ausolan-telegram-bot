@@ -17,11 +17,26 @@ import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
+/**
+ * Service responsible for processing PDF documents.
+ * <p>
+ * This service utilizes the Apache PDFBox library to perform low-level operations
+ * on PDF files, specifically focusing on resource extraction.
+ * </p>
+ */
 @Service
 @RequiredArgsConstructor
 @Log4j2
 public class PdfService {
 
+    /**
+     * Extracts the first embedded image found on the first page of a PDF document.
+     *
+     * @param pdfBytes The raw byte array of the PDF document.
+     * @return A byte array representing the extracted image in PNG format.
+     * @throws IOException If an error occurs during PDF loading or image writing.
+     * @throws IllegalStateException If no image is found on the first page of the document.
+     */
     public byte[] extractImageFromPdf(byte[] pdfBytes) throws IOException {
         try (PDDocument document = Loader.loadPDF(pdfBytes)) {
             PDPage page = document.getPage(0);
