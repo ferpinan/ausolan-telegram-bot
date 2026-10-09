@@ -1,0 +1,56 @@
+meta {
+  name: Huecos camino
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://www.quironsalud.com/idcsalud-client/cm/portal-paciente/pdp-api/v1/citas/huecos
+  body: formUrlEncoded
+  auth: inherit
+}
+
+headers {
+  Accept-Encoding: gzip, deflate, br, zstd
+  User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:148.0) Gecko/20100101 Firefox/148.0
+  Accept: */*
+  Accept-Language: es-ES,es;q=0.9,en-US;q=0.8,en;q=0.7
+  Referer: https://www.quironsalud.com/portal-paciente/es/citas
+  X-Proxia-CSRF: 4521a264be758ebed47b0632ed776c17221b3931a7dfb1bec303c76fb212fd30
+  Content-Type: application/x-www-form-urlencoded;charset=UTF-8
+  Origin: https://www.quironsalud.com
+  Alt-Used: www.quironsalud.com
+  Connection: keep-alive
+  Cookie: _abck=881D6FE78A1A1EB2F11A8E4CB251EAA4~0~YAAQFCMRAjgYFq6cAQAAa7Ovsw9/HPEnMrOJzTPn56uO5FPZiu0OZNAXB6ntajK8oeWkgo9T5FZdri8OGaDbQ3jGgFJ2UmpfH9d9I2rfIsrLtQo3HozPh1g7DyLLrdYTQfDCZeHAkt4QUZ41YSf5h+xJFAWI7LvSRB/Of8nTaE2385GBIkAgwEBFSx+yGRyuFeR+MXy8R/3dAiR9k+LkNvyR3kLT8THa4Y4ZDqiOlnKmVV3park8HVVEZJFLtiBj46iwEf4rc1O+p3uL7Dd8exH+wHflwpUCH/1R6GBbMYUJwRDmT3BiiyYJiRWUvR9IcdSJBr6nJznJSQ8n4wbIBer2xPDc48tTMxhLpwHrSyUlz9O0L9vC41xySCfjKNB8GCqPfEQ9E3B/QvidI89WQYDN7H/i4QYq/ZqZbneurSTw6EEE0CHoTaRNIMaOq5upZYTAs3Fws2mwFdUJzWZiH4E9UExohFl7Gs8WNy0ZjLbFm/RwwfHaJCo/Fq/7Y6ZY205dvaee8kGZOacloOxgCdbVeIBWdTHsOjiQruOh994Ka7lwaUUh4Ndg4Xq+LRbziD7So9eMqHSeznTFaO+X13DJjGZwyqj4O9X/nukurVpmwLNrbKJVEoVN4XIYNRX9BrTnQgqOEgBW6X7foCwAmwTsxnC2thNKtRaqdDlPre4AM5rSIg0y3FIbXoMaAKzlWjtSjpCa9QehxbUjhW91H/OCGc5JNabb9SFX1u3B3ncm1lc4AglIEjlwvyvZYY/KTLjHaxCP9jthxoxeUeOEh/n7QyoRzefjUhuOWkAgfjJP4T5fbhVVnBYhiUQUNZ0QLCaLgmLIDxFbQwUJwPXr4wNamAbx9bAMPhEQs2A1nzOWAON86sht7ynEcILc/eZ3pVIZ+8yN6zfWyCXO+6Vj9B0GUBTXui2/AguFpy7M~-1~-1~-1~AAQAAAAF%2f%2f%2f%2f%2fypC0du1M2UYLp2U9JAZxO+LPndp2YXbPJy+sEMoUNgYKCybxyIVL%2fVO8Ia8dxWszRG1gaZ+OV8vgjytxp4fw4xLKMJn9EVJyIOV~-1; dtCookie=v_4_srv_7_sn_A9FDB9B4BA2AC532C33DE84A47017693_perc_100000_ol_0_mul_1_app-3Ada13eb9e3e5df4ed_1; bm_sz=E25CE4656E88C60A85E3B96267BB6497~YAAQVwgQAlVJ3bKcAQAAhYuxsx+N1L0X+HGLz0esRSoL41hah0MNyXVpaAO2qLsskhKlGL11GtUMdByVUh7bpPg2JGk8QUnMWhXjjsoibQR3fbBDlosf6qej8YIFjxGm/fhe/bOSlhYjoRhTimN2VN+JU1DwVyCWhAorr+aAjUNfKkKIjtA+XAjCoYcJ/0ErN+RcX2koaTTMY5bOc+NUD1tKd09vSocuvWkRA3KWQz7P144KkDhOoiEJyBkv5pptXfMu0xolErsNo+vLgn/r5tgb+KGS8hVu+0fyIPQwHqbi0ubJRXprMYM6CLAY9ag+mWjAu7SauoptIhcodLRICFT8QKn4CqWgRikX7neCw1TDROwNdpkkHCdtO6gcZIieq5TgesghAboV18gdTpPrUk0HNTqlXrQgqtzD5vVVbzGP4394KcfyW7/tHn6Y47SwkSsCtHgH2Y1aPi/TaLpkvTIRKSDnXU4zIs59tlzYzCT55EWl2vB1HBQ=~3552578~4535090; ak_bmsc=663CE82AB7A0712B404931797512AACB~000000000000000000000000000000~YAAQVwgQAuwz3bKcAQAAtW2wsx900Y7Wp3z7f8hUDVPA+IGRkhJfkY9aTTU9KYDOC74Qv45Al1GtQT0qu0IOywEcxfYHtKH6aDKmaaq22xpA/COTt+UcrpZH27MLsxh2YXKhkBE4kkOo4rXBWjYRlX09B6edx80joA1U1wHK5vdPsy1qjXzBWirwXo6H/gPJ72Hs1k0DyZzYssEGb3XUN3BqqrDIqtYAK4cv01Yeyj3hWEx8KMIECarjlPmJp2G+UJTpgqVfkqWGHQVXibe6ZIc73tgdJsDMUtr8MQ/dNFQLGAopRVtKKkj8tcBN4wg4iroCYlCWRcBTpswwEnUxwtTyYohhDA9i4knI8Zzz7zT6tvCbQ5ztPgkWlwnTpV6Hctka/Zz6kJOCM+K1dqu19uW5M3UcLPOjCDg0ggh+V69PY3g+LltlYfvlU9Ljm30h6cTBrhZZxqpvqKVBXeXWc/8mEm9ujCLGvvvh50Y0St50Kkfn3luE3m0=; bm_mi=79077A1D6462DAD5C420703A9EC7F196~YAAQFCMRAp4YFq6cAQAAcLuvsx/YlxgNuMXgJwOOgDmst1yvPHzDnDPlHKik4TxTfDoyf72/yY46R4/lrlRSnaFFGxErNd6jbbEB2Jjd1absjMAJUIlSCLul59eI+F9EVD8kwH3B2ftD78XcCu7cROMa6sOWKzSXYMP7rtLb8Gi4qKK0ZX2CoCfZ4uR9N8AmuZbQliufWE72hSFYLiemVa1Er0rSPldi0puBedcR3jJxi+BBcctsp8UTXWpSZZqXPZAXyidJBaQaS90bXQEhXwlH0tDKYpoOD4jnOPmIGsuuvdiIIHhpvFNJe2eOvOOch7t4u3nVMXhQW2K9xzrUqr3rfa2/0ihw/D9dAA+p7S6OkJ6D804qskNT3bo/HIVccUFVEXT/ZPZNhSxWVfY=~1; bm_sv=F592A24F8A75E82EDCF3BC3198007972~YAAQFCMRAqYYFq6cAQAApryvsx+3fL4LtBZ8nUWw8PwpI6Sum3rlJy5uf815FjXwx4D86VpFCvbonTWsNXOQJ5M6GSKNQCS8fKsco/NqSIeSgIMCUXqpMYF9kd3VjjPl7sohstHCHQS8R4/8XmaWnu7mCekyTRRhGuXdvigINkrDy62k5Hrs872G3ozuT0OJaLm17NqK8w+5HSNqq187DWGkfXAnlRj34lrr0p7D6RyPUbvEVkFNlvexYCF2tFGHekea1bAr~1; JSESSIONID=424CB93A5F6F056CC3E20AA1E9A29B3A; _proxia_csrf=4521a264be758ebed47b0632ed776c17221b3931a7dfb1bec303c76fb212fd30; forceHTTPS=true
+  Sec-Fetch-Dest: empty
+  Sec-Fetch-Mode: cors
+  Sec-Fetch-Site: same-origin
+  Priority: u=4
+  TE: trailers
+}
+
+body:form-urlencoded {
+  codCitacion: 0
+  idCentro: 034200100
+  codCentroAsociado: 034200199
+  idPrestacion: 4000-10010709
+  idGarante: 244
+  idEspecialidad: 40
+  idProfesional: 1079705
+  idGestion: 238808571
+  financialType: 1
+  garanteHIS: true
+  espPresHIS: true
+  fechaInicio: 03/03/2026
+  idProvincia: 20
+  idCita: C20261101218
+  idCentroEspecialidades: 034200199
+  isProtocolosChatBot: false
+  isLast: false
+  tipoBusqueda: SIMPLE
+  horaInicio: 133504
+}
+
+settings {
+  encodeUrl: false
+}
